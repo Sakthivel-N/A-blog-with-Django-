@@ -1,0 +1,8 @@
+<h1 style="text-align:center";><u>Welcome To Our Blog</u></h1>
+<hr>
+{% for i in posts reversed %}
+<h2><a style="text-decoration:none"; href ='/post_details/{{i.id}}'>{{i.title}}</a></h2>
+<h5>{{i.created_At}}</h5>
+<p>{{i.body|truncatewords:2}}</p>
+<hr>
+{% endfor %}
